@@ -13,6 +13,11 @@ def add (lista, word):
     reszta += "\n"
     save_to_file(lista, reszta)
 
+def top (lista, word) :
+    plik = read_file(lista)
+    plik = plik.replace(word, '')
+    plik += word
+    save_to_file(lista, plik)
 def read_file(file_path):
     with open(file_path, "r") as file:
         return file.read()
@@ -33,8 +38,10 @@ def main():
         contains('lista.txt',sys.argv[2])
     if sys.argv[1] == 'add':
         add('lista.txt',sys.argv[2])
-#    if sys.argv[1] == 'delete':
-#        delete('lista.txt',sys.argv[2])
+    if sys.argv[1] == 'delete':
+        delete('lista.txt',sys.argv[2])
+    if sys.argv[1] == 'top':
+        top('lista.txt',sys.argv[2])
 
 
 if __name__ == '__main__':
