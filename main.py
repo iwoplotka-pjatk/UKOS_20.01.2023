@@ -1,6 +1,13 @@
 import sys
 
 
+def contains(lista, word):
+    if word in read_file(lista):
+        print(word + " zawiera sie w "+ lista)
+    else:
+        print(word + " nie zawiera sie w " + lista)
+
+
 def read_file(file_path):
     with open(file_path, "r") as file:
         return file.read()
@@ -16,7 +23,11 @@ def run_program(name, params):
     if params[0] == 'push':
         pass
 
+def main():
+    contains('lista.txt',sys.argv[2])
 
 if __name__ == '__main__':
     args = sys.argv
     run_program('PyCharm', sys.argv[1:])
+    main()
+
