@@ -7,8 +7,11 @@ def contains(lista, word):
     else:
         print(word + " nie zawiera sie w " + lista)
 
-def add (lista,word) :
-    save_to_file(lista,word)
+def add (lista, word):
+    reszta = read_file(lista)
+    reszta += word
+    reszta += "\n"
+    save_to_file(lista, reszta)
 
 def read_file(file_path):
     with open(file_path, "r") as file:
