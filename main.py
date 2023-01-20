@@ -1,6 +1,11 @@
 import sys
 
 
+def delete(lista, word):
+    plik = read_file(lista)
+    plik = plik.replace(word, '')
+    save_to_file(lista, plik)
+
 def contains(lista, word):
     if word in read_file(lista):
         print(word + " zawiera sie w "+ lista)
@@ -42,6 +47,7 @@ def main():
         delete('lista.txt',sys.argv[2])
     if sys.argv[1] == 'top':
         top('lista.txt',sys.argv[2])
+
 
 
 if __name__ == '__main__':
