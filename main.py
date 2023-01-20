@@ -7,6 +7,8 @@ def contains(lista, word):
     else:
         print(word + " nie zawiera sie w " + lista)
 
+def add (lista,word) :
+    save_to_file(lista,word)
 
 def read_file(file_path):
     with open(file_path, "r") as file:
@@ -26,8 +28,8 @@ def run_program(name, params):
 def main():
     if sys.argv[1] == 'contains':
         contains('lista.txt',sys.argv[2])
-#    if sys.argv[1] == 'add':
- #       add('lista.txt',sys.argv[2])
+   if sys.argv[1] == 'add':
+        add('lista.txt',sys.argv[2])
 #    if sys.argv[1] == 'delete':
 #        delete('lista.txt',sys.argv[2])
 
@@ -36,4 +38,3 @@ if __name__ == '__main__':
     args = sys.argv
     run_program('PyCharm', sys.argv[1:])
     main()
-
