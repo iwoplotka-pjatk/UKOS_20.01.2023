@@ -28,7 +28,7 @@ def run_program(name, params):
 def main():
     if sys.argv[1] == 'contains':
         contains('lista.txt',sys.argv[2])
-   if sys.argv[1] == 'add':
+    if sys.argv[1] == 'add':
         add('lista.txt',sys.argv[2])
 #    if sys.argv[1] == 'delete':
 #        delete('lista.txt',sys.argv[2])
